@@ -129,7 +129,7 @@ with st.expander("ℹ️ How to Use", expanded=True):
     """)
 
 # Image Input Section
-upload_tab, camera_tab, sample_tab = st.tabs(["📁 Upload Image", "📸 Take Photo", "🖼️ Sample Images"])
+upload_tab, sample_tab = st.tabs(["📁 Upload Image", "🖼️ Sample Images"])
 
 # Session State Management
 if 'current_image' not in st.session_state:
@@ -165,11 +165,11 @@ with upload_tab:
     if uploaded_file:
         st.session_state.current_image = Image.open(uploaded_file)
 
-# Camera Tab
-with camera_tab:
-    camera_image = st.camera_input("Capture lesion photo")
-    if camera_image:
-        st.session_state.current_image = Image.open(camera_image)
+# # Camera Tab
+# with camera_tab:
+#     camera_image = st.camera_input("Capture lesion photo")
+#     if camera_image:
+#         st.session_state.current_image = Image.open(camera_image)
 
 # Processing and Results Display
 if st.session_state.current_image:
