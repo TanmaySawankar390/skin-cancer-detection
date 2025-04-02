@@ -92,7 +92,7 @@ def display_results(image, prediction):
                 """)
 
 # Streamlit UI
-st.title("🔍 Skin Cancer Detection Assistant")
+st.title("🔍Skin Cancer ISIC Detection Assistant")
 st.markdown("""
 **Madhav Institute of Technology & Science, Gwalior**  
 *Computer Science & Engineering Department*
