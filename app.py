@@ -92,8 +92,11 @@ def display_results(image, prediction):
                 """)
 
 # Streamlit UI
-st.title("🔍 Skin Cancer Detection Assistant")
+st.title("🔍 MITS Skin Cancer Detection Assistant")
 st.markdown("""
+**Madhav Institute of Technology & Science, Gwalior**  
+*Computer Science & Engineering Department*
+
 **How to use:**
 1. Upload a clear photo of skin lesion
 2. Our AI will analyze the image
@@ -101,7 +104,7 @@ st.markdown("""
 """)
 
 # Image input section
-upload_tab, camera_tab = st.tabs(["Upload Image", "Take Photo"])
+upload_tab, camera_tab = st.tabs(["📁 Upload Image", "📸 Take Photo"])
 
 with upload_tab:
     uploaded_file = st.file_uploader("Choose skin image", type=["jpg", "jpeg", "png"])
@@ -121,13 +124,39 @@ if uploaded_file or camera_image:
 # Sidebar information
 st.sidebar.header("Clinical Notes")
 st.sidebar.markdown("""
-- **Model Accuracy:** 94.2% (ISIC validation set)
+- **Model Accuracy:** 81.3% (ISIC validation set)
 - **Coverage:** 12 lesion types (7 benign, 5 malignant)
 - **Sensitivity:** 92.8% for malignant cases
 - **Specificity:** 95.1% for benign cases
 """)
+
+st.sidebar.header("Developed By")
+st.sidebar.markdown("""
+**B.Tech CSE Students**  
+*Batch 2022-2026*
+
+👨💻 **Amul Agrawal**  
+`0901CS233D03`  
+
+👨💻 **Harshit Varshney**  
+`0901CS233D07`  
+
+👨💻 **Lokendra Sharma**  
+`0901CS233D08`  
+
+👨💻 **Tanmay Sawnkar**  
+`0901CS221139`  
+""")
+
 st.sidebar.markdown("""
 **Important Disclaimer:**  
 This tool provides preliminary analysis only.  
 Always consult a certified dermatologist for diagnosis.
+""")
+
+# Footer
+st.markdown("---")
+st.caption("""
+- 🛠️ Project developed under the guidance of Dr. Rahul Dubey Professor CSE Department.
+- 📧 Contact: 22cs10ta64@mitsgwl.ac.in | 📞 +919713999175
 """)
