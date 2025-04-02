@@ -93,6 +93,9 @@ def display_results(image, prediction):
 
 # Streamlit UI
 st.title("🔍Skin Cancer ISIC Detection Assistant")
+st.caption("""
+- Source: [ISIC Kaggle Dataset](https://www.kaggle.com/datasets/nodoubttome/skin-cancer9-classesisic)
+""")
 st.markdown("""
 **Madhav Institute of Technology & Science, Gwalior**  
 *Computer Science & Engineering Department*
